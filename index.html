@@ -1,92 +1,159 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSE Jihad | Cyber Security</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, sans-serif;
-            background:#000;
-            color:white;
-            text-align:center;
-        }
-        nav{
-            background:#111;
-            padding:15px;
-        }
-        nav a{
-            color:#00ffcc;
-            margin:15px;
-            text-decoration:none;
-            font-weight:bold;
-        }
-        nav a:hover{
-            color:white;
-        }
-        h1{
-            color:#00ffcc;
-            margin-top:30px;
-        }
-        .section{
-            padding:40px 20px;
-        }
-        .card{
-            background:#111;
-            margin:20px auto;
-            padding:20px;
-            width:90%;
-            max-width:400px;
-            border-radius:10px;
-            box-shadow:0 0 15px #00ffcc;
-        }
-        footer{
-            background:#111;
-            padding:15px;
-            margin-top:30px;
-        }
-    </style>
+<title>CSE Jihad | Cyber Security Academy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#0a0a0a;
+    color:white;
+    text-align:center;
+}
+nav{
+    background:#111;
+    padding:15px;
+}
+nav a{
+    color:#00ffcc;
+    margin:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{
+    color:white;
+}
+.section{
+    padding:40px 20px;
+}
+.card{
+    background:#111;
+    margin:20px auto;
+    padding:20px;
+    width:90%;
+    max-width:500px;
+    border-radius:10px;
+    box-shadow:0 0 15px #00ffcc;
+}
+input{
+    padding:10px;
+    width:80%;
+    margin:10px;
+    border:none;
+    border-radius:5px;
+}
+button{
+    padding:10px 20px;
+    background:#00ffcc;
+    border:none;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+button:hover{
+    background:white;
+}
+footer{
+    background:#111;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
 </head>
 <body>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#learn">Learn</a>
-    <a href="#roadmap">Roadmap</a>
+<a href="#">Home</a>
+<a href="#signup">Sign Up</a>
+<a href="#learn">Learn</a>
+<a href="#roadmap">Roadmap</a>
 </nav>
 
-<h1>CSE Jihad</h1>
-<p>Future Cyber Security Expert 🛡️</p>
+<h1>CSE Jihad Cyber Security Academy 🛡️</h1>
+<p>Learn Cyber Security From Beginner to Advanced</p>
+
+<div class="section" id="signup">
+<h2>Sign Up</h2>
+<div class="card">
+<input type="text" placeholder="Enter Your Name"><br>
+<input type="email" placeholder="Enter Your Email"><br>
+<input type="password" placeholder="Create Password"><br>
+<button onclick="alert('Welcome to CSE Jihad Cyber Academy!')">Register</button>
+</div>
+</div>
 
 <div class="section" id="learn">
-    <h2>What is Cyber Security?</h2>
-    <div class="card">
-        <p>Cyber Security is the practice of protecting systems, networks, and data from cyber attacks and hackers.</p>
-    </div>
+<h2>What is Cyber Security?</h2>
+<div class="card">
+<p>Cyber Security is the practice of protecting systems, networks, and data from digital attacks.</p>
+<p>It includes ethical hacking, network protection, system security, and digital forensics.</p>
+</div>
 
-    <div class="card">
-        <h3>Types of Cyber Security</h3>
-        <p>✔ Network Security</p>
-        <p>✔ Web Security</p>
-        <p>✔ Ethical Hacking</p>
-        <p>✔ Information Security</p>
-    </div>
+<div class="card">
+<h3>Main Areas of Cyber Security</h3>
+<p>✔ Network Security</p>
+<p>✔ Web Application Security</p>
+<p>✔ Ethical Hacking (Legal & Defensive)</p>
+<p>✔ Cloud Security</p>
+<p>✔ Information Security</p>
+</div>
 </div>
 
 <div class="section" id="roadmap">
-    <h2>Cyber Security Learning Roadmap</h2>
-    <div class="card">
-        <p>Step 1: Learn HTML, CSS, JavaScript</p>
-        <p>Step 2: Learn Networking Basics</p>
-        <p>Step 3: Learn Linux</p>
-        <p>Step 4: Learn Ethical Hacking Tools</p>
-        <p>Step 5: Practice & Build Projects</p>
-    </div>
+<h2>Full Learning Roadmap</h2>
+
+<div class="card">
+<h3>Step 1: Basic Foundation</h3>
+<p>• Learn HTML, CSS, JavaScript</p>
+<p>• Understand how websites work</p>
+<p>• Learn basic computer concepts</p>
+</div>
+
+<div class="card">
+<h3>Step 2: Networking</h3>
+<p>• What is IP Address</p>
+<p>• How Internet works</p>
+<p>• TCP/IP Basics</p>
+<p>• DNS & HTTP</p>
+</div>
+
+<div class="card">
+<h3>Step 3: Operating Systems</h3>
+<p>• Windows Security Basics</p>
+<p>• Linux Fundamentals</p>
+<p>• Command Line Practice</p>
+</div>
+
+<div class="card">
+<h3>Step 4: Cyber Security Concepts</h3>
+<p>• Malware Types (Virus, Trojan, Ransomware)</p>
+<p>• Phishing Awareness</p>
+<p>• Password Security</p>
+<p>• Two-Factor Authentication</p>
+</div>
+
+<div class="card">
+<h3>Step 5: Ethical Hacking (Legal Learning)</h3>
+<p>• What is Ethical Hacking</p>
+<p>• Penetration Testing Basics</p>
+<p>• Security Testing Methods</p>
+<p>• Bug Bounty Concept</p>
+</div>
+
+<div class="card">
+<h3>Step 6: Advanced Topics</h3>
+<p>• Web Security Basics (SQL Injection concept)</p>
+<p>• XSS Concept (High Level)</p>
+<p>• Cyber Laws & Ethics</p>
+<p>• Build Your Own Security Projects</p>
+</div>
+
 </div>
 
 <footer>
-    © 2026 CSE Jihad | Cyber Security Learning Platform
+© 2026 CSE Jihad | Cyber Security Learning Platform
 </footer>
 
 </body>
-</html>
+    </html>
