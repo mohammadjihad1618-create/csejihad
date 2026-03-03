@@ -5,69 +5,26 @@
 <title>CSE Jihad Cyber Security Academy</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI, sans-serif;
-}
-
 body{
+margin:0;
+font-family:Arial;
 background:black;
 color:white;
-overflow-x:hidden;
+text-align:center;
 }
 
-/* Matrix Canvas */
-canvas{
-position:fixed;
-top:0;
-left:0;
-z-index:-1;
+section{
+padding:40px;
 }
 
-/* Glass Card */
 .card{
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(15px);
-border:1px solid rgba(0,255,255,0.3);
+background:#111;
 padding:30px;
 margin:20px auto;
 width:90%;
 max-width:800px;
-border-radius:20px;
-box-shadow:0 0 40px rgba(0,255,255,0.5);
-transition:0.4s;
-}
-
-.card:hover{
-transform:scale(1.03);
-box-shadow:0 0 70px cyan;
-}
-
-header{
-text-align:center;
-padding:60px 20px;
-}
-
-header img{
-width:180px;
-margin-bottom:20px;
-}
-
-h1{
-color:cyan;
-font-size:36px;
-}
-
-h2{
-color:#00ffff;
-margin-bottom:20px;
-}
-
-section{
-padding:40px 20px;
-text-align:center;
+border-radius:15px;
+box-shadow:0 0 30px cyan;
 }
 
 input{
@@ -75,120 +32,90 @@ padding:12px;
 width:80%;
 margin:10px;
 border:none;
-border-radius:10px;
+border-radius:8px;
 }
 
 button{
-padding:12px 30px;
+padding:12px 25px;
 background:cyan;
 border:none;
-border-radius:10px;
+border-radius:8px;
 font-weight:bold;
 cursor:pointer;
-transition:0.3s;
 }
 
 button:hover{
 background:#00aaaa;
-transform:scale(1.1);
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:rgba(0,0,0,0.8);
 }
 </style>
+
+<script>
+function joinAcademy(){
+document.getElementById("signup").style.display="none";
+document.getElementById("lesson").style.display="block";
+}
+</script>
+
 </head>
 
 <body>
 
-<canvas id="matrix"></canvas>
-
-<header>
-<img src="logo.png">
+<section id="signup">
 <h1>CSE Jihad Cyber Security Academy</h1>
-<p>Master Ethical Hacking & Cyber Security Professionally</p>
-</header>
-
-<section>
-<h2>Complete Learning Path</h2>
 <div class="card">
-✔ Computer Basics<br>
-✔ Internet & Networking<br>
-✔ Linux Fundamentals<br>
-✔ Programming (HTML, CSS, JS, Python)<br>
-✔ Cyber Security Basics<br>
-✔ Cryptography Concepts<br>
-✔ OWASP Security Risks<br>
-✔ Ethical Penetration Testing Concepts<br>
-✔ Cloud Security Basics<br>
-✔ SOC & Monitoring<br>
-✔ Digital Forensics Intro<br>
-✔ Career Preparation & Certifications
+<h2>Join Now</h2>
+<input type="text" placeholder="Enter Name"><br>
+<input type="email" placeholder="Enter Email"><br>
+<button onclick="joinAcademy()">Start Learning</button>
 </div>
 </section>
 
-<section>
-<h2>Hacker Types Explained</h2>
+<section id="lesson" style="display:none;">
+<h2>Full Cyber Security Roadmap</h2>
+
 <div class="card">
-<b>White Hat:</b> Legal security professional who protects systems.<br><br>
-<b>Grey Hat:</b> Finds vulnerabilities but may not always have permission.<br><br>
-<b>Black Hat:</b> Criminal hacker who performs illegal cyber attacks.
+<h3>Step 1: Computer Fundamentals</h3>
+Operating system, hardware, internet basics
 </div>
-</section>
 
-<section>
-<h2>Join The Academy</h2>
 <div class="card">
-<form action="https://formsubmit.co/your@email.com" method="POST">
-<input type="text" name="name" placeholder="Enter Your Name" required><br>
-<input type="email" name="email" placeholder="Enter Your Email" required><br>
-<input type="hidden" name="_captcha" value="false">
-<button type="submit">Join Now</button>
-</form>
+<h3>Step 2: Programming</h3>
+HTML, CSS, JavaScript, Python basics
 </div>
+
+<div class="card">
+<h3>Step 3: Networking</h3>
+IP, DNS, TCP/IP, HTTP, Router, Firewall
+</div>
+
+<div class="card">
+<h3>Step 4: Linux</h3>
+Command line, file system, permissions
+</div>
+
+<div class="card">
+<h3>Step 5: Cyber Security Basics</h3>
+Malware, phishing, password security, encryption
+</div>
+
+<div class="card">
+<h3>Step 6: Ethical Hacking Concepts</h3>
+Vulnerability scanning (legal), OWASP overview, penetration testing concept
+</div>
+
+<div class="card">
+<h3>Hacker Types</h3>
+White Hat – Legal security professional<br>
+Grey Hat – Between legal & illegal<br>
+Black Hat – Criminal hacker
+</div>
+
+<div class="card">
+<h3>Final Goal</h3>
+Cyber Security Analyst / SOC Analyst / Security Engineer
+</div>
+
 </section>
-
-<footer>
-© 2026 CSE Jihad | Learn Ethical • Stay Legal • Stay Secure
-</footer>
-
-<script>
-var canvas=document.getElementById("matrix");
-var ctx=canvas.getContext("2d");
-
-canvas.height=window.innerHeight;
-canvas.width=window.innerWidth;
-
-var letters="01";
-letters=letters.split("");
-
-var fontSize=14;
-var columns=canvas.width/fontSize;
-var drops=[];
-for(var x=0;x<columns;x++)
-drops[x]=1;
-
-function draw(){
-ctx.fillStyle="rgba(0,0,0,0.05)";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-
-ctx.fillStyle="#00ffff";
-ctx.font=fontSize+"px monospace";
-
-for(var i=0;i<drops.length;i++){
-var text=letters[Math.floor(Math.random()*letters.length)];
-ctx.fillText(text,i*fontSize,drops[i]*fontSize);
-
-if(drops[i]*fontSize>canvas.height && Math.random()>0.975)
-drops[i]=0;
-
-drops[i]++;
-}
-}
-setInterval(draw,33);
-</script>
 
 </body>
-  </html>
+</html>
