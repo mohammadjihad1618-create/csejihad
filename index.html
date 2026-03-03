@@ -4,27 +4,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CSE Jihad Cyber Security Academy</title>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:black;
+background:#000814;
 color:white;
 text-align:center;
 }
 
+header{
+padding:40px 20px;
+background:#001d3d;
+}
+
+header img{
+width:180px;
+margin-bottom:15px;
+}
+
+h1{
+color:#00c3ff;
+}
+
 section{
-padding:40px;
+padding:40px 20px;
 }
 
 .card{
-background:#111;
+background:#111a2e;
 padding:30px;
 margin:20px auto;
 width:90%;
-max-width:800px;
+max-width:600px;
 border-radius:15px;
-box-shadow:0 0 30px cyan;
+box-shadow:0 0 30px rgba(0,195,255,0.5);
 }
 
 input{
@@ -37,7 +53,7 @@ border-radius:8px;
 
 button{
 padding:12px 25px;
-background:cyan;
+background:#00c3ff;
 border:none;
 border-radius:8px;
 font-weight:bold;
@@ -45,77 +61,50 @@ cursor:pointer;
 }
 
 button:hover{
-background:#00aaaa;
+background:#0077ff;
 }
 </style>
-
-<script>
-function joinAcademy(){
-document.getElementById("signup").style.display="none";
-document.getElementById("lesson").style.display="block";
-}
-</script>
 
 </head>
 
 <body>
 
-<section id="signup">
+<header>
+<img src="logo.png">
 <h1>CSE Jihad Cyber Security Academy</h1>
+<p>Learn Ethical Cyber Security Professionally</p>
+</header>
+
+<section>
 <div class="card">
-<h2>Join Now</h2>
-<input type="text" placeholder="Enter Name"><br>
-<input type="email" placeholder="Enter Email"><br>
-<button onclick="joinAcademy()">Start Learning</button>
+<h2>Sign Up Now</h2>
+<input type="text" id="name" placeholder="Enter Your Name" required><br>
+<input type="email" id="email" placeholder="Enter Your Email" required><br>
+<button onclick="sendMail()">Join Academy</button>
 </div>
 </section>
 
-<section id="lesson" style="display:none;">
-<h2>Full Cyber Security Roadmap</h2>
+<script>
+(function(){
+emailjs.init("YOUR_PUBLIC_KEY");
+})();
 
-<div class="card">
-<h3>Step 1: Computer Fundamentals</h3>
-Operating system, hardware, internet basics
-</div>
+function sendMail(){
 
-<div class="card">
-<h3>Step 2: Programming</h3>
-HTML, CSS, JavaScript, Python basics
-</div>
+var params = {
+from_name: document.getElementById("name").value,
+from_email: document.getElementById("email").value,
+};
 
-<div class="card">
-<h3>Step 3: Networking</h3>
-IP, DNS, TCP/IP, HTTP, Router, Firewall
-</div>
-
-<div class="card">
-<h3>Step 4: Linux</h3>
-Command line, file system, permissions
-</div>
-
-<div class="card">
-<h3>Step 5: Cyber Security Basics</h3>
-Malware, phishing, password security, encryption
-</div>
-
-<div class="card">
-<h3>Step 6: Ethical Hacking Concepts</h3>
-Vulnerability scanning (legal), OWASP overview, penetration testing concept
-</div>
-
-<div class="card">
-<h3>Hacker Types</h3>
-White Hat – Legal security professional<br>
-Grey Hat – Between legal & illegal<br>
-Black Hat – Criminal hacker
-</div>
-
-<div class="card">
-<h3>Final Goal</h3>
-Cyber Security Analyst / SOC Analyst / Security Engineer
-</div>
-
-</section>
+emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",params)
+.then(function(res){
+alert("User Joined Successfully! Email Notification Sent.");
+})
+.catch(function(error){
+alert("Error sending email.");
+});
+}
+</script>
 
 </body>
 </html>
