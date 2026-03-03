@@ -1,159 +1,200 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CSE Jihad | Cyber Security Academy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSE Jihad Cyber Security Academy</title>
+
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#0a0a0a;
-    color:white;
-    text-align:center;
+color:white;
+overflow-x:hidden;
+background:black;
 }
-nav{
-    background:#111;
-    padding:15px;
+
+/* Premium Animated Gradient Background */
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-2;
+background:linear-gradient(-45deg,#000814,#001d3d,#003566,#000814);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
 }
-nav a{
-    color:#00ffcc;
-    margin:15px;
-    text-decoration:none;
-    font-weight:bold;
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
-nav a:hover{
-    color:white;
+
+/* Floating 3D Glow Effect */
+.glow{
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#00c3ff55,transparent);
+top:20%;
+left:30%;
+filter:blur(120px);
+animation:move 10s infinite alternate ease-in-out;
+z-index:-1;
 }
-.section{
-    padding:40px 20px;
+
+@keyframes move{
+from{transform:translate(-50px,-50px);}
+to{transform:translate(50px,50px);}
 }
+
+header{
+text-align:center;
+padding:60px 20px;
+}
+
+header img{
+width:170px;
+margin-bottom:20px;
+}
+
+h1{
+color:#00c3ff;
+font-size:35px;
+}
+
+section{
+padding:50px 20px;
+text-align:center;
+}
+
+h2{
+color:#00c3ff;
+margin-bottom:20px;
+font-size:28px;
+}
+
 .card{
-    background:#111;
-    margin:20px auto;
-    padding:20px;
-    width:90%;
-    max-width:500px;
-    border-radius:10px;
-    box-shadow:0 0 15px #00ffcc;
+background:rgba(17,26,46,0.7);
+backdrop-filter:blur(15px);
+padding:30px;
+margin:20px auto;
+width:90%;
+max-width:700px;
+border-radius:20px;
+box-shadow:0 0 40px rgba(0,195,255,0.4);
+transition:0.4s;
 }
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 60px rgba(0,195,255,0.8);
+}
+
 input{
-    padding:10px;
-    width:80%;
-    margin:10px;
-    border:none;
-    border-radius:5px;
+padding:12px;
+width:80%;
+margin:10px;
+border:none;
+border-radius:8px;
 }
+
 button{
-    padding:10px 20px;
-    background:#00ffcc;
-    border:none;
-    font-weight:bold;
-    border-radius:5px;
-    cursor:pointer;
+padding:12px 30px;
+background:#00c3ff;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
 }
+
 button:hover{
-    background:white;
+background:#0077ff;
+transform:scale(1.1);
 }
+
 footer{
-    background:#111;
-    padding:15px;
-    margin-top:30px;
+text-align:center;
+padding:30px;
+background:rgba(0,0,0,0.6);
+margin-top:50px;
 }
 </style>
 </head>
+
 <body>
 
-<nav>
-<a href="#">Home</a>
-<a href="#signup">Sign Up</a>
-<a href="#learn">Learn</a>
-<a href="#roadmap">Roadmap</a>
-</nav>
+<div class="bg"></div>
+<div class="glow"></div>
 
-<h1>CSE Jihad Cyber Security Academy 🛡️</h1>
-<p>Learn Cyber Security From Beginner to Advanced</p>
+<header>
+<img src="logo.png">
+<h1>CSE Jihad Cyber Security Academy</h1>
+<p>Learn Ethical Hacking & Cyber Security From Beginner To Advanced</p>
+</header>
 
-<div class="section" id="signup">
-<h2>Sign Up</h2>
+<section>
+<h2>What is Ethical Hacking?</h2>
+<div class="card">
+Ethical hacking is the legal practice of testing systems and networks to find security vulnerabilities before criminals exploit them. It is always done with permission.
+</div>
+</section>
+
+<section>
+<h2>Types of Hackers</h2>
+
+<div class="card">
+<h3>White Hat Hacker</h3>
+White hat hackers are legal security professionals who protect companies from cyber attacks. They perform penetration testing and improve system security.
+</div>
+
+<div class="card">
+<h3>Grey Hat Hacker</h3>
+Grey hat hackers operate between legal and illegal boundaries. They may find vulnerabilities without permission but usually do not have malicious intent.
+</div>
+
+<div class="card">
+<h3>Black Hat Hacker</h3>
+Black hat hackers are criminals who steal data, spread malware, and perform illegal cyber attacks for money or damage.
+</div>
+</section>
+
+<section>
+<h2>Complete Cyber Security Roadmap</h2>
+<div class="card">
+✔ Computer Fundamentals<br>
+✔ Programming (HTML, CSS, JS, Python)<br>
+✔ Networking (IP, DNS, TCP/IP)<br>
+✔ Linux & Command Line<br>
+✔ Cyber Security Basics<br>
+✔ Cryptography Basics<br>
+✔ Web Security Concepts<br>
+✔ Security Monitoring (SOC)<br>
+✔ Cloud Security<br>
+✔ Digital Forensics<br>
+✔ Ethical Penetration Testing
+</div>
+</section>
+
+<section>
+<h2>Start Your Cyber Security Journey</h2>
 <div class="card">
 <input type="text" placeholder="Enter Your Name"><br>
 <input type="email" placeholder="Enter Your Email"><br>
-<input type="password" placeholder="Create Password"><br>
-<button onclick="alert('Welcome to CSE Jihad Cyber Academy!')">Register</button>
+<button>Join Now</button>
 </div>
-</div>
-
-<div class="section" id="learn">
-<h2>What is Cyber Security?</h2>
-<div class="card">
-<p>Cyber Security is the practice of protecting systems, networks, and data from digital attacks.</p>
-<p>It includes ethical hacking, network protection, system security, and digital forensics.</p>
-</div>
-
-<div class="card">
-<h3>Main Areas of Cyber Security</h3>
-<p>✔ Network Security</p>
-<p>✔ Web Application Security</p>
-<p>✔ Ethical Hacking (Legal & Defensive)</p>
-<p>✔ Cloud Security</p>
-<p>✔ Information Security</p>
-</div>
-</div>
-
-<div class="section" id="roadmap">
-<h2>Full Learning Roadmap</h2>
-
-<div class="card">
-<h3>Step 1: Basic Foundation</h3>
-<p>• Learn HTML, CSS, JavaScript</p>
-<p>• Understand how websites work</p>
-<p>• Learn basic computer concepts</p>
-</div>
-
-<div class="card">
-<h3>Step 2: Networking</h3>
-<p>• What is IP Address</p>
-<p>• How Internet works</p>
-<p>• TCP/IP Basics</p>
-<p>• DNS & HTTP</p>
-</div>
-
-<div class="card">
-<h3>Step 3: Operating Systems</h3>
-<p>• Windows Security Basics</p>
-<p>• Linux Fundamentals</p>
-<p>• Command Line Practice</p>
-</div>
-
-<div class="card">
-<h3>Step 4: Cyber Security Concepts</h3>
-<p>• Malware Types (Virus, Trojan, Ransomware)</p>
-<p>• Phishing Awareness</p>
-<p>• Password Security</p>
-<p>• Two-Factor Authentication</p>
-</div>
-
-<div class="card">
-<h3>Step 5: Ethical Hacking (Legal Learning)</h3>
-<p>• What is Ethical Hacking</p>
-<p>• Penetration Testing Basics</p>
-<p>• Security Testing Methods</p>
-<p>• Bug Bounty Concept</p>
-</div>
-
-<div class="card">
-<h3>Step 6: Advanced Topics</h3>
-<p>• Web Security Basics (SQL Injection concept)</p>
-<p>• XSS Concept (High Level)</p>
-<p>• Cyber Laws & Ethics</p>
-<p>• Build Your Own Security Projects</p>
-</div>
-
-</div>
+</section>
 
 <footer>
-© 2026 CSE Jihad | Cyber Security Learning Platform
+© 2026 CSE Jihad Cyber Security Academy<br>
+Learn Ethical • Stay Legal • Stay Secure
 </footer>
 
 </body>
-    </html>
+</html>
