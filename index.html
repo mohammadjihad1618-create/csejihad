@@ -1,191 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSE JIHAD | Cyber Security Platform</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Security Hub</title>  <!-- Three.js CDN -->  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    #bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Orbitron', sans-serif;
-}
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #00ffcc;
+      background: rgba(0,0,0,0.6);
+    }
 
-body{
-    background: #000;
-    color:white;
-    overflow-x:hidden;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      background: rgba(0,0,0,0.6);
+    }
 
-/* Exclusive Animated Cyber Background */
-body::before{
-    content:"";
-    position:fixed;
-    width:100%;
-    height:100%;
-    background: radial-gradient(circle at 50% 50%, #001f3f, #000);
-    animation: pulse 6s infinite alternate;
-    z-index:-2;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
 
-@keyframes pulse{
-    from{filter:brightness(1);}
-    to{filter:brightness(1.4);}
-}
+    nav a:hover {
+      color: #00ffcc;
+    }
 
-/* Moving Grid */
-body::after{
-    content:"";
-    position:fixed;
-    width:200%;
-    height:200%;
-    background: linear-gradient(#00ffff22 1px, transparent 1px),
-                linear-gradient(90deg,#00ffff22 1px, transparent 1px);
-    background-size:50px 50px;
-    animation: moveGrid 15s linear infinite;
-    z-index:-1;
-}
+    section {
+      padding: 40px;
+    }
 
-@keyframes moveGrid{
-    from{transform:translate(0,0);}
-    to{transform:translate(-200px,-200px);}
-}
+    .card {
+      background: rgba(30,41,59,0.8);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 15px rgba(0,255,204,0.3);
+    }
 
-header{
-    text-align:center;
-    padding:40px 20px;
-}
-
-.logo{
-    width:220px;
-    filter:drop-shadow(0 0 25px cyan);
-    transition:0.5s;
-}
-
-.logo:hover{
-    transform:rotateY(20deg) scale(1.1);
-}
-
-h1{
-    font-size:42px;
-    margin-top:20px;
-    color:cyan;
-}
-
-.tagline{
-    color:#aaa;
-    margin-top:10px;
-}
-
-.section{
-    margin:60px auto;
-    width:85%;
-    max-width:1000px;
-    padding:40px;
-    background:rgba(0,255,255,0.05);
-    border:1px solid cyan;
-    border-radius:20px;
-    box-shadow:0 0 25px cyan;
-    transition:0.5s;
-}
-
-.section:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 40px cyan;
-}
-
-h2{
-    color:cyan;
-    margin-bottom:20px;
-}
-
-p{
-    line-height:1.7;
-    color:#ddd;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 30px;
-    background:3dhackrs;
-    color:black with hackrs man and laptop coding time;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.4s;
-}
-
-.btn:hover{
-    background:white;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    background:#001f3f;
-    margin-top:40px;
-}
-</style>
-</head>
-
-<body>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      color: gray;
+    }
+  </style></head>
+<body><canvas id="bg"></canvas>
 
 <header>
-    <img src="logo.png" class="logo">
-    <h1>CSE JIHAD</h1>
-    <p class="tagline">TECH | CODE | LEARN | GROW</p>
-</header>
+  Cyber Security Hub 🔐
+</header><nav>
+  <a href="#home">Home</a>
+  <a href="#hacking">Hacking</a>
+  <a href="#ethical">Ethical Hacking</a>
+  <a href="#security">Cyber Security</a>
+  <a href="#contact">Contact</a>
+</nav><section id="home">
+  <h2>Welcome</h2>
+  <div class="card">
+    This website is all about hacking, ethical hacking, and cyber security learning.
+  </div>
+</section><section id="hacking">
+  <h2>Hacking Basics</h2>
+  <div class="card">
+    Hacking means finding vulnerabilities in systems. Always use knowledge legally.
+  </div>
+</section><section id="ethical">
+  <h2>Ethical Hacking</h2>
+  <div class="card">
+    Ethical hackers help companies find security issues and fix them.
+  </div>
+</section><section id="security">
+  <h2>Cyber Security</h2>
+  <div class="card">
+    Cyber security protects systems, networks, and data from attacks.
+  </div>
+</section><section id="learning">
+  <h2>Complete Cyber Security Guide (1 Year Roadmap)</h2>
+  <div class="card">
+    <h3>🟢 What is Hacking?</h3>
+    Hacking means identifying weaknesses in systems, networks, or applications. It can be legal or illegal depending on intention.<h3>⚪ White Hat Hacker</h3>
+White hat hackers are ethical hackers. They work legally to find and fix security vulnerabilities. Companies hire them to protect systems.
 
-<section class="section">
-    <h2>What is Ethical Hacking?</h2>
-    <p>
-        Ethical Hacking is the legal process of testing systems to find security
-        vulnerabilities before malicious attackers exploit them.
-        It helps companies protect data, networks and digital infrastructure.
-    </p>
-</section>
+<h3>⚫ Black Hat Hacker</h3>
+Black hat hackers are illegal hackers. They break into systems to steal data, money, or cause damage.
 
-<section class="section">
-    <h2>Types of Hackers</h2>
-    <p>
-        🟢 <b>White Hat Hacker:</b> Legal security expert who protects systems. <br><br>
-        ⚪ <b>Grey Hat Hacker:</b> Finds vulnerabilities without permission but does not misuse them. <br><br>
-        🔴 <b>Black Hat Hacker:</b> Illegal attacker who breaks into systems for personal gain.
-    </p>
-</section>
+<h3>⚙️ Grey Hat Hacker</h3>
+Grey hat hackers are in between. They may hack without permission but usually don’t have harmful intentions.
 
-<section class="section">
-    <h2>Cyber Security Learning Roadmap</h2>
-    <p>
-        1️⃣ Computer Basics & Networking <br>
-        2️⃣ Linux & Operating Systems <br>
-        3️⃣ Programming (Python, C, JS) <br>
-        4️⃣ Web Security Fundamentals <br>
-        5️⃣ Penetration Testing Concepts <br>
-        6️⃣ Security Tools (Legal Practice Only) <br>
-        7️⃣ Certification Preparation
-    </p>
-</section>
+<h3>📅 1 Year Learning Roadmap</h3>
 
-<section class="section">
-    <h2>Why Join CSE JIHAD?</h2>
-    <p>
-        ✔ Practical Cyber Security Knowledge <br>
-        ✔ Legal Ethical Hacking Guidance <br>
-        ✔ Step-by-Step Career Path <br>
-        ✔ Real-World Security Awareness
-    </p>
-    
-</section>
+<b>Month 1-2:</b>
+- Basic Computer Knowledge
+- Internet & Networking Basics
+- Learn Linux (Kali Linux)
 
-<footer>
-    © 2026 CSE JIHAD | Cyber Security Platform
-</footer>
+<br><br>
 
-</body>
-                                       </html>
+<b>Month 3-4:</b>
+- HTML, CSS, JavaScript basics
+- Understand how websites work
+
+<br><br>
+
+<b>Month 5-6:</b>
+- Networking deep (IP, DNS, HTTP)
+- Tools: Nmap, Wireshark
+
+<br><br>
+
+<b>Month 7-8:</b>
+- Web Security Basics
+- Learn about XSS, SQL Injection (theory only)
+
+<br><br>
+
+<b>Month 9-10:</b>
+- Practice on legal platforms (CTF, labs)
+- Bug bounty basics
+
+<br><br>
+
+<b>Month 11-12:</b>
+- Advanced topics
+- Build your own tools
+- Start freelancing or internships
+
+<h3>⚠️ Important Rule</h3>
+Always use your skills legally. Never hack without permission.
+
+  </div>
+</section><section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    Email: your@email.com
+  </div>
+</section><footer>
+  © 2026 Cyber Security Hub | Made by You 🚀
+</footer><script>
+  const canvas = document.getElementById('bg');
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+
+  const renderer = new THREE.WebGLRenderer({ canvas: canvas });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  const geometry = new THREE.BufferGeometry();
+  const vertices = [];
+
+  for (let i = 0; i < 5000; i++) {
+    vertices.push(
+      (Math.random() - 0.5) * 1000,
+      (Math.random() - 0.5) * 1000,
+      (Math.random() - 0.5) * 1000
+    );
+  }
+
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+  const material = new THREE.PointsMaterial({ color: 0x00ffcc });
+  const points = new THREE.Points(geometry, material);
+
+  scene.add(points);
+  camera.position.z = 5;
+
+  function animate() {
+    requestAnimationFrame(animate);
+
+    points.rotation.x += 0.0005;
+    points.rotation.y += 0.001;
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  });
+</script></body>
+    </html>
